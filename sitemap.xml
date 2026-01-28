@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.grapeslab.com/index.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- About Page -->
+    <url>
+        <loc>https://www.grapeslab.com/about.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Workspace Page -->
+    <url>
+        <loc>https://www.grapeslab.com/workspace.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Blog Page -->
+    <url>
+        <loc>https://www.grapeslab.com/blog.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.grapeslab.com/contact.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Articles -->
+    <url>
+        <loc>https://www.grapeslab.com/blog-produktivitas-coworking.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-15</news:publication_date>
+            <news:title>10 Tips Meningkatkan Produktivitas di Co-Working Space</news:title>
+        </news:news>
+    </url>
+    
+    <url>
+        <loc>https://www.grapeslab.com/blog-masa-depan-remote-work.html</loc>
+        <lastmod>2024-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-12</news:publication_date>
+            <news:title>Masa Depan Remote Work dan Co-Working</news:title>
+        </news:news>
+    </url>
+    
+    <url>
+        <loc>https://www.grapeslab.com/blog-memilih-coworking-startup.html</loc>
+        <lastmod>2024-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-10</news:publication_date>
+            <news:title>Memilih Co-Working Space yang Tepat untuk Startup Anda</news:title>
+        </news:news>
+    </url>
+    
+    <url>
+        <loc>https://www.grapeslab.com/blog-networking-coworking.html</loc>
+        <lastmod>2024-01-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-08</news:publication_date>
+            <news:title>Networking di Co-Working Space: Tips dan Strategi</news:title>
+        </news:news>
+    </url>
+    
+    <url>
+        <loc>https://www.grapeslab.com/blog-desain-interior-kreativitas.html</loc>
+        <lastmod>2024-01-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-05</news:publication_date>
+            <news:title>Desain Interior yang Meningkatkan Kreativitas</news:title>
+        </news:news>
+    </url>
+    
+    <url>
+        <loc>https://www.grapeslab.com/blog-work-life-balance.html</loc>
+        <lastmod>2024-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Grapeslab Blog</news:name>
+                <news:language>id</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-03</news:publication_date>
+            <news:title>Work-Life Balance untuk Remote Workers</news:title>
+        </news:news>
+    </url>
+    
+</urlset>

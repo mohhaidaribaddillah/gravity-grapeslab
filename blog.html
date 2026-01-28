@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog - Grapeslab Co-Working Space</title>
+    <meta name="description"
+        content="Read the latest insights, tips, and news about co-working, productivity, and remote work from Grapeslab." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols_Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#1b130d] dark:text-[#fcfaf8] transition-colors duration-300">
+    <div class="layout-container flex h-full grow flex-col">
+        <!-- Top Navigation Bar -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3ece7] dark:border-b-[#3d2c20] px-4 md:px-10 lg:px-40 py-4 bg-background-light dark:bg-background-dark">
+            <div class="flex items-center gap-4 text-[#1b130d] dark:text-[#fcfaf8]">
+                <img src="logo.png" alt="Grapeslab Logo" class="h-8 w-auto"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="size-6 text-primary" style="display:none;">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Grapeslab</h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-4 items-center">
+                <nav class="hidden md:flex items-center gap-9">
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="workspace.html">Workspace</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="about.html">Tentang Kami</a>
+                    <a class="text-sm font-medium leading-normal text-primary" href="blog.html">Blog</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="contact.html">Contact Us</a>
+                </nav>
+                <button
+                    class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span>Login</span>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="mobile-menu md:hidden bg-background-light dark:bg-background-dark border-b border-[#f3ece7] dark:border-[#3d2c20]">
+            <nav class="flex flex-col px-4 py-2">
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="index.html">Home</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="workspace.html">Workspace</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="about.html">Tentang Kami</a>
+                <a class="py-3 text-sm font-medium text-primary border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="blog.html">Blog</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="contact.html">Contact Us</a>
+                <button
+                    class="mt-3 mb-2 w-full cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold">
+                    Login
+                </button>
+            </nav>
+        </div>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="px-4 lg:px-40 py-20 bg-gradient-to-br from-primary/10 to-transparent">
+                <div class="max-w-[960px] mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">Blog Grapeslab</h1>
+                    <p class="text-xl text-[#1b130d]/70 dark:text-[#fcfaf8]/70 max-w-[720px] mx-auto mb-8">
+                        Insights, tips, dan berita terbaru seputar co-working, produktivitas, dan remote work.
+                    </p>
+                    <!-- Search Bar -->
+                    <div
+                        class="max-w-[600px] mx-auto bg-white dark:bg-[#3d2c20] rounded-xl p-2 flex items-center gap-2 shadow-lg">
+                        <span class="material-symbols-outlined text-primary ml-3">search</span>
+                        <input type="text" id="blog-search" placeholder="Cari artikel..."
+                            class="flex-1 bg-transparent border-none focus:ring-0 text-sm" onkeyup="searchBlogs()" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Grid -->
+            <section class="px-4 lg:px-40 py-20">
+                <div class="max-w-[1200px] mx-auto">
+                    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="10 tips meningkatkan produktivitas di co-working space"
+                            data-category="productivity">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">PRODUCTIVITY</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">5 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    10 Tips Meningkatkan Produktivitas di Co-Working Space
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Temukan strategi efektif untuk memaksimalkan produktivitas Anda saat bekerja di
+                                    ruang bersama.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">Sarah Johnson</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 15, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="masa depan remote work dan co-working" data-category="trends">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/10 text-blue-600 text-xs font-bold rounded-full">TRENDS</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">7 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    Masa Depan Remote Work dan Co-Working
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Bagaimana tren kerja jarak jauh akan membentuk industri co-working di tahun-tahun
+                                    mendatang.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">Michael Chen</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 12, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="memilih co-working space yang tepat untuk startup anda" data-category="guide">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-green-500/10 text-green-600 text-xs font-bold rounded-full">GUIDE</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">6 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    Memilih Co-Working Space yang Tepat untuk Startup Anda
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Panduan lengkap untuk founder startup dalam memilih workspace yang mendukung
+                                    pertumbuhan bisnis.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">David Martinez</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 10, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="networking di co-working space tips dan strategi" data-category="networking">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-purple-500/10 text-purple-600 text-xs font-bold rounded-full">NETWORKING</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">4 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    Networking di Co-Working Space: Tips dan Strategi
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Cara efektif membangun koneksi profesional dan memperluas jaringan bisnis Anda.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">Emily Wong</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 8, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 5 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="desain interior yang meningkatkan kreativitas" data-category="design">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-pink-500/10 text-pink-600 text-xs font-bold rounded-full">DESIGN</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">5 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    Desain Interior yang Meningkatkan Kreativitas
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Bagaimana elemen desain ruang kerja dapat mempengaruhi kreativitas dan inovasi tim
+                                    Anda.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">Sarah Johnson</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 5, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 6 -->
+                        <article class="blog-card bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group"
+                            data-title="work life balance untuk remote workers" data-category="wellness">
+                            <div class="h-56 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600');">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="px-3 py-1 bg-yellow-500/10 text-yellow-600 text-xs font-bold rounded-full">WELLNESS</span>
+                                    <span class="text-xs text-[#9a6c4c] dark:text-[#c4a484]">6 min read</span>
+                                </div>
+                                <h2 class="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                    Work-Life Balance untuk Remote Workers
+                                </h2>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                    Strategi menjaga keseimbangan hidup dan pekerjaan saat bekerja dari co-working
+                                    space.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-full bg-cover"
+                                            style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100');">
+                                        </div>
+                                        <div class="text-xs">
+                                            <p class="font-medium">Michael Chen</p>
+                                            <p class="text-[#9a6c4c] dark:text-[#c4a484]">Jan 3, 2024</p>
+                                        </div>
+                                    </div>
+                                    <a href="blog-produktivitas-coworking.html"
+                                        class="inline-block bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">
+                                        Read More →
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="no-results" class="hidden text-center py-20">
+                        <span
+                            class="material-symbols-outlined text-6xl text-[#9a6c4c] dark:text-[#c4a484] mb-4 block">search_off</span>
+                        <h3 class="text-2xl font-bold mb-2">Tidak Ada Hasil</h3>
+                        <p class="text-[#1b130d]/60 dark:text-[#fcfaf8]/60">Coba kata kunci lain untuk menemukan artikel
+                            yang Anda cari.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="px-4 lg:px-40 py-20 bg-primary text-white">
+                <div class="max-w-[720px] mx-auto text-center">
+                    <span class="material-symbols-outlined text-5xl mb-4 block">mail</span>
+                    <h2 class="text-3xl font-black mb-4">Dapatkan Update Terbaru</h2>
+                    <p class="text-lg mb-8 opacity-90">
+                        Subscribe newsletter kami untuk mendapatkan artikel, tips, dan penawaran eksklusif langsung ke
+                        inbox Anda.
+                    </p>
+                    <form onsubmit="subscribeNewsletter(event)"
+                        class="flex flex-col sm:flex-row gap-4 max-w-[500px] mx-auto">
+                        <input type="email" id="newsletter-email" placeholder="Email Anda" required
+                            class="flex-1 px-6 py-4 rounded-lg text-[#1b130d] focus:ring-2 focus:ring-white" />
+                        <button type="submit"
+                            class="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background-dark text-white px-4 lg:px-40 py-16">
+            <div class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-2 text-white">
+                        <img src="logo.png" alt="Grapeslab Logo" class="h-6 w-auto"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="size-6 text-primary" style="display:none;">
+                            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-bold">Grapeslab</h2>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Redefining the modern workspace through geometric design and community-focused environments.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">thumb_up</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Explore</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="workspace.html">Find a Space</a></li>
+                        <li><a class="hover:text-white transition-colors" href="workspace.html">Meeting Rooms</a></li>
+                        <li><a class="hover:text-white transition-colors" href="workspace.html">Virtual Office</a></li>
+                        <li><a class="hover:text-white transition-colors" href="workspace.html">Global Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Company</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="contact.html">Partner With Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Contact</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@grapeslab.com</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +1 (555) 123-4567</li>
+                        <li class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-xs">location_on</span> 123 Cowork St, <br />
+                            Innovation City, 94103</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+                © 2024 Grapeslab. All rights reserved. | Privacy Policy | Terms of Service
+            </div>
+        </footer>
+
+        <!-- Floating WhatsApp Button -->
+        <a class="whatsapp-float bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform"
+            href="https://wa.me/1234567890?text=Hello%20Grapeslab,%20I%20have%20a%20question%20about%20your%20blog"
+            target="_blank">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                </path>
+            </svg>
+        </a>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top"
+            class="scroll-to-top bg-primary text-white p-3 rounded-full shadow-2xl hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Scroll to Top
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Search Blogs
+        function searchBlogs() {
+            const searchInput = document.getElementById('blog-search').value.toLowerCase();
+            const blogCards = document.querySelectorAll('.blog-card');
+            const noResults = document.getElementById('no-results');
+            let hasResults = false;
+
+            blogCards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                const category = card.dataset.category.toLowerCase();
+
+                if (title.includes(searchInput) || category.includes(searchInput)) {
+                    card.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (hasResults || searchInput === '') {
+                noResults.classList.add('hidden');
+            } else {
+                noResults.classList.remove('hidden');
+            }
+        }
+
+        // Share to WhatsApp
+        function shareToWhatsApp(title) {
+            const url = window.location.href;
+            const message = `Check out this article: "${title}" - ${url}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Subscribe Newsletter
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const message = `Hello Grapeslab, I would like to subscribe to your newsletter. My email is: ${email}`;
+            window.open(`https://wa.me/1234567890?text=${encodeURIComponent(message)}`, '_blank');
+            document.getElementById('newsletter-email').value = '';
+            alert('Thank you for subscribing! We will contact you soon via WhatsApp.');
+        }
+    </script>
+</body>
+
+</html>

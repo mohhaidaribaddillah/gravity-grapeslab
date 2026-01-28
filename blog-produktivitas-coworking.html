@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="haidar" />
+    <meta name="keywords"
+        content="produktivitas, co-working space, tips kerja, workspace, grapeslab, remote work, efisiensi kerja" />
+    <meta name="description"
+        content="Temukan 10 tips efektif untuk meningkatkan produktivitas Anda saat bekerja di co-working space. Panduan lengkap dari Grapeslab." />
+    <meta property="og:title" content="10 Tips Meningkatkan Produktivitas di Co-Working Space" />
+    <meta property="og:description"
+        content="Temukan 10 tips efektif untuk meningkatkan produktivitas Anda saat bekerja di co-working space." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" />
+    <title>10 Tips Meningkatkan Produktivitas di Co-Working Space | Grapeslab Blog</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .toc {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .toc.active {
+            max-height: 1000px;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "10 Tips Meningkatkan Produktivitas di Co-Working Space",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200",
+      "author": {
+        "@type": "Person",
+        "name": "haidar"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Grapeslab",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "logo.png"
+        }
+      },
+      "datePublished": "2024-01-15",
+      "dateModified": "2024-01-15"
+    }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b130d] dark:text-[#fcfaf8]">
+    <div class="layout-container flex h-full grow flex-col">
+        <!-- Navigation -->
+        <header
+            class="flex items-center justify-between border-b border-[#f3ece7] dark:border-[#3d2c20] px-4 md:px-10 lg:px-40 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-40">
+            <div class="flex items-center gap-4">
+                <img src="logo.png" alt="Grapeslab Logo" class="h-8 w-auto" onerror="this.style.display='none';">
+                <h2 class="text-lg font-bold">Grapeslab</h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-4 items-center">
+                <nav class="hidden md:flex items-center gap-9">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="workspace.html">Workspace</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">Tentang
+                        Kami</a>
+                    <a class="text-sm font-medium text-primary" href="blog.html">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact
+                        Us</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="mobile-menu md:hidden bg-background-light dark:bg-background-dark border-b border-[#f3ece7] dark:border-[#3d2c20]">
+            <nav class="flex flex-col px-4 py-2">
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="index.html">Home</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="workspace.html">Workspace</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="about.html">Tentang Kami</a>
+                <a class="py-3 text-sm font-medium text-primary border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="blog.html">Blog</a>
+                <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
+                    href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+
+        <main class="flex-1">
+            <!-- Article Header -->
+            <article class="px-4 lg:px-40 py-12">
+                <div class="max-w-[800px] mx-auto">
+                    <!-- Breadcrumb -->
+                    <div class="flex items-center gap-2 text-sm mb-6">
+                        <a href="index.html" class="text-primary hover:underline">Home</a>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <a href="blog.html" class="text-primary hover:underline">Blog</a>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <span class="text-[#9a6c4c]">10 Tips Produktivitas</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight">10 Tips Meningkatkan Produktivitas di
+                        Co-Working Space</h1>
+
+                    <!-- Meta Info -->
+                    <div
+                        class="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b border-[#e7d9cf] dark:border-[#3d2c20]">
+                        <div class="flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-full bg-cover"
+                                style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100');">
+                            </div>
+                            <div class="text-sm">
+                                <p class="font-bold">Sarah Johnson</p>
+                                <p class="text-[#9a6c4c] dark:text-[#c4a484]">Author</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-[#9a6c4c]">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span>
+                            <span>15 Januari 2024</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-[#9a6c4c]">
+                            <span class="material-symbols-outlined text-sm">schedule</span>
+                            <span>5 menit baca</span>
+                        </div>
+                        <span
+                            class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">PRODUCTIVITY</span>
+                    </div>
+
+                    <!-- Featured Image -->
+                    <figure class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200"
+                            alt="Co-working space modern dengan desain produktif"
+                            class="w-full h-[400px] object-cover rounded-xl shadow-lg" />
+                        <figcaption class="text-sm text-[#9a6c4c] dark:text-[#c4a484] mt-3 text-center italic">Ruang
+                            kerja modern yang dirancang untuk meningkatkan produktivitas</figcaption>
+                    </figure>
+
+                    <!-- Table of Contents -->
+                    <div class="bg-[#f3f0ee] dark:bg-[#2a1e15] rounded-xl p-6 mb-8">
+                        <button onclick="toggleTOC()" class="flex items-center justify-between w-full text-left">
+                            <h2 class="text-xl font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">list</span>
+                                Daftar Isi
+                            </h2>
+                            <span class="material-symbols-outlined" id="toc-icon">expand_more</span>
+                        </button>
+                        <div id="toc-content" class="toc mt-4">
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#pendahuluan" class="text-primary hover:underline">Pendahuluan</a></li>
+                                <li><a href="#tips-produktivitas" class="text-primary hover:underline">10 Tips
+                                        Meningkatkan Produktivitas</a>
+                                    <ul class="ml-4 mt-2 space-y-1">
+                                        <li><a href="#tip1" class="text-[#9a6c4c] hover:text-primary">1. Pilih Lokasi
+                                                yang Tepat</a></li>
+                                        <li><a href="#tip2" class="text-[#9a6c4c] hover:text-primary">2. Buat Rutinitas
+                                                Harian</a></li>
+                                        <li><a href="#tip3" class="text-[#9a6c4c] hover:text-primary">3. Manfaatkan
+                                                Teknologi</a></li>
+                                        <li><a href="#tip4" class="text-[#9a6c4c] hover:text-primary">4. Networking
+                                                Aktif</a></li>
+                                        <li><a href="#tip5" class="text-[#9a6c4c] hover:text-primary">5. Kelola Waktu
+                                                dengan Baik</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#manfaat" class="text-primary hover:underline">Manfaat Co-Working Space</a>
+                                </li>
+                                <li><a href="#kesimpulan" class="text-primary hover:underline">Kesimpulan</a></li>
+                                <li><a href="#faq" class="text-primary hover:underline">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none">
+                        <h2 id="pendahuluan" class="text-2xl font-bold mt-8 mb-4">Pendahuluan</h2>
+                        <p class="mb-4 leading-relaxed">
+                            Di era digital yang serba cepat ini, produktivitas menjadi kunci kesuksesan dalam dunia
+                            kerja. Co-working space telah menjadi solusi populer bagi para profesional, freelancer, dan
+                            startup yang mencari lingkungan kerja yang fleksibel dan inspiratif. Namun, bekerja di ruang
+                            bersama juga memiliki tantangan tersendiri yang dapat mempengaruhi produktivitas Anda.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Artikel ini akan membahas 10 tips efektif yang dapat membantu Anda memaksimalkan
+                            produktivitas saat bekerja di co-working space. Dari memilih lokasi yang tepat hingga
+                            memanfaatkan teknologi modern, setiap tips dirancang untuk membantu Anda mencapai performa
+                            terbaik dalam pekerjaan Anda.
+                        </p>
+
+                        <!-- Baca Juga 1 -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6">
+                            <p class="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">📖 Baca Juga:</p>
+                            <a href="blog-masa-depan-remote-work.html"
+                                class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                                Masa Depan Remote Work dan Co-Working: Tren yang Perlu Anda Ketahui
+                            </a>
+                        </div>
+
+                        <h2 id="tips-produktivitas" class="text-2xl font-bold mt-12 mb-6">10 Tips Meningkatkan
+                            Produktivitas di Co-Working Space</h2>
+
+                        <h3 id="tip1" class="text-xl font-bold mt-8 mb-4">1. Pilih Lokasi yang Tepat di Dalam Workspace
+                        </h3>
+                        <p class="mb-4 leading-relaxed">
+                            Lokasi tempat duduk Anda sangat mempengaruhi produktivitas. Pilih area yang sesuai dengan
+                            jenis pekerjaan Anda. Jika membutuhkan konsentrasi tinggi, pilih area yang lebih tenang dan
+                            jauh dari area umum. Sebaliknya, jika pekerjaan Anda memerlukan kolaborasi, pilih area yang
+                            lebih terbuka dan dekat dengan meeting room.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Pertimbangkan juga faktor pencahayaan alami, akses ke power outlet, dan jarak ke fasilitas
+                            seperti pantry atau toilet. Lokasi yang strategis dapat menghemat waktu dan energi Anda
+                            sepanjang hari.
+                        </p>
+
+                        <h3 id="tip2" class="text-xl font-bold mt-8 mb-4">2. Buat Rutinitas Harian yang Konsisten</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Konsistensi adalah kunci produktivitas. Buat rutinitas harian yang jelas, mulai dari waktu
+                            datang, waktu istirahat, hingga waktu pulang. Rutinitas yang teratur membantu otak Anda
+                            untuk lebih fokus dan efisien dalam bekerja.
+                        </p>
+
+                        <figure class="my-8">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800"
+                                alt="Profesional bekerja dengan fokus di co-working space"
+                                class="w-full h-[300px] object-cover rounded-xl shadow-lg" />
+                            <figcaption class="text-sm text-[#9a6c4c] dark:text-[#c4a484] mt-3 text-center italic">
+                                Rutinitas yang konsisten meningkatkan fokus dan produktivitas</figcaption>
+                        </figure>
+
+                        <h3 id="tip3" class="text-xl font-bold mt-8 mb-4">3. Manfaatkan Teknologi dan Tools
+                            Produktivitas</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Gunakan aplikasi dan tools yang dapat meningkatkan efisiensi kerja Anda. Aplikasi time
+                            management seperti Toggl atau RescueTime dapat membantu Anda melacak waktu kerja. Project
+                            management tools seperti Trello atau Asana membantu mengorganisir tugas dengan lebih baik.
+                        </p>
+
+                        <blockquote class="border-l-4 border-primary bg-primary/5 p-6 my-8 italic">
+                            <p class="text-lg leading-relaxed">
+                                "Produktivitas bukan tentang bekerja lebih keras, tetapi bekerja lebih cerdas.
+                                Co-working space memberikan Anda lingkungan yang mendukung untuk mencapai keduanya."
+                            </p>
+                            <footer class="text-sm mt-4 font-semibold text-primary">— Michael Chen, CEO Grapeslab
+                            </footer>
+                        </blockquote>
+
+                        <h3 id="tip4" class="text-xl font-bold mt-8 mb-4">4. Networking dan Kolaborasi Aktif</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Salah satu keunggulan co-working space adalah komunitas yang beragam. Manfaatkan kesempatan
+                            untuk networking dengan profesional lain. Kolaborasi dapat membuka peluang baru, memberikan
+                            perspektif berbeda, dan bahkan meningkatkan motivasi kerja Anda.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Ikuti event-event yang diadakan oleh co-working space, bergabung dalam komunitas online, dan
+                            jangan ragu untuk memulai percakapan dengan member lain. Namun, tetap jaga keseimbangan
+                            antara networking dan waktu kerja produktif Anda.
+                        </p>
+
+                        <!-- Promo Image -->
+                        <div class="my-8">
+                            <a href="https://wa.me/62895369969300?text=Halo%20Grapeslab,%20saya%20tertarik%20untuk%20booking%20workspace"
+                                target="_blank">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+                                    alt="Promo Grapeslab Co-Working Space"
+                                    class="w-full h-[250px] object-cover rounded-xl shadow-lg hover:shadow-2xl transition-shadow cursor-pointer" />
+                            </a>
+                            <p class="text-center text-sm mt-3 text-primary font-semibold">
+                                🎉 Dapatkan Diskon 20% untuk Member Baru! Klik gambar untuk info lebih lanjut
+                            </p>
+                        </div>
+
+                        <h3 id="tip5" class="text-xl font-bold mt-8 mb-4">5. Kelola Waktu dengan Teknik Pomodoro</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Teknik Pomodoro adalah metode time management yang efektif. Bekerjalah selama 25 menit
+                            dengan fokus penuh, kemudian istirahat 5 menit. Setelah 4 sesi, ambil istirahat lebih
+                            panjang (15-30 menit). Teknik ini membantu menjaga fokus dan mencegah burnout.
+                        </p>
+
+                        <!-- Baca Juga 2 -->
+                        <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 my-6">
+                            <p class="text-sm font-semibold text-green-800 dark:text-green-300 mb-2">📖 Baca Juga:</p>
+                            <a href="blog-memilih-coworking-startup.html"
+                                class="text-green-600 dark:text-green-400 hover:underline font-medium">
+                                Panduan Memilih Co-Working Space yang Tepat untuk Startup Anda
+                            </a>
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-8 mb-4">6. Minimalisir Distraksi</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Gunakan headphone noise-cancelling untuk mengurangi gangguan suara. Matikan notifikasi yang
+                            tidak penting di smartphone dan komputer. Komunikasikan kepada rekan kerja bahwa Anda sedang
+                            dalam mode fokus dengan menggunakan status "Do Not Disturb" atau indikator visual lainnya.
+                        </p>
+
+                        <h3 class="text-xl font-bold mt-8 mb-4">7. Jaga Kesehatan dan Ergonomi</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Pastikan postur duduk Anda ergonomis untuk mencegah masalah kesehatan jangka panjang. Atur
+                            tinggi kursi dan meja dengan benar, posisikan monitor sejajar dengan mata, dan gunakan
+                            external keyboard jika perlu. Lakukan peregangan ringan setiap jam untuk menjaga sirkulasi
+                            darah.
+                        </p>
+
+                        <h3 class="text-xl font-bold mt-8 mb-4">8. Manfaatkan Fasilitas yang Tersedia</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Co-working space biasanya dilengkapi dengan berbagai fasilitas seperti meeting room, phone
+                            booth, printer, dan pantry. Manfaatkan fasilitas ini secara maksimal untuk mendukung
+                            pekerjaan Anda. Jangan ragu untuk bertanya kepada staff jika ada fasilitas yang belum Anda
+                            ketahui.
+                        </p>
+
+                        <h3 class="text-xl font-bold mt-8 mb-4">9. Set Boundaries yang Jelas</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Tetapkan batasan waktu kerja yang jelas. Meskipun co-working space menawarkan fleksibilitas,
+                            penting untuk memiliki work-life balance. Hindari overworking dengan menetapkan jam kerja
+                            yang konsisten dan patuhi jadwal tersebut.
+                        </p>
+
+                        <h3 class="text-xl font-bold mt-8 mb-4">10. Evaluasi dan Adaptasi</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Lakukan evaluasi rutin terhadap produktivitas Anda. Apa yang berhasil? Apa yang perlu
+                            diperbaiki? Jangan takut untuk mengubah strategi jika metode tertentu tidak efektif. Setiap
+                            orang memiliki gaya kerja yang berbeda, temukan yang paling cocok untuk Anda.
+                        </p>
+
+                        <h2 id="manfaat" class="text-2xl font-bold mt-12 mb-6">Manfaat Co-Working Space untuk
+                            Produktivitas</h2>
+                        <p class="mb-4 leading-relaxed">
+                            Co-working space menawarkan berbagai manfaat yang dapat meningkatkan produktivitas Anda.
+                            Lingkungan kerja yang profesional membantu memisahkan antara waktu kerja dan waktu pribadi.
+                            Komunitas yang suportif memberikan motivasi dan inspirasi. Fasilitas lengkap menghemat waktu
+                            dan biaya operasional.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Fleksibilitas yang ditawarkan memungkinkan Anda untuk bekerja sesuai dengan ritme
+                            produktivitas pribadi. Networking opportunities membuka peluang bisnis baru. Semua ini
+                            berkontribusi pada peningkatan produktivitas dan kesuksesan profesional Anda.
+                        </p>
+
+                        <h2 id="kesimpulan" class="text-2xl font-bold mt-12 mb-6">Kesimpulan</h2>
+                        <p class="mb-4 leading-relaxed">
+                            Meningkatkan produktivitas di co-working space memerlukan kombinasi strategi yang tepat,
+                            disiplin diri, dan pemanfaatan optimal dari fasilitas yang tersedia. Dengan menerapkan 10
+                            tips yang telah dibahas, Anda dapat menciptakan lingkungan kerja yang mendukung performa
+                            terbaik Anda.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Ingatlah bahwa produktivitas adalah perjalanan, bukan tujuan. Terus eksperimen dengan
+                            berbagai metode, evaluasi hasilnya, dan adaptasi sesuai kebutuhan Anda. Co-working space
+                            memberikan Anda platform yang sempurna untuk berkembang dan mencapai tujuan profesional
+                            Anda.
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Siap untuk meningkatkan produktivitas Anda? Kunjungi Grapeslab dan temukan workspace yang
+                            sempurna untuk kesuksesan Anda!
+                        </p>
+
+                        <!-- FAQ Section -->
+                        <h2 id="faq" class="text-2xl font-bold mt-12 mb-6">Frequently Asked Questions (FAQ)</h2>
+                        <div class="space-y-4">
+                            <div class="bg-white dark:bg-[#3d2c20] rounded-xl p-6">
+                                <h3 class="font-bold text-lg mb-2">Berapa lama waktu yang dibutuhkan untuk beradaptasi
+                                    dengan co-working space?</h3>
+                                <p class="text-[#1b130d]/70 dark:text-[#fcfaf8]/70">
+                                    Biasanya membutuhkan 1-2 minggu untuk beradaptasi sepenuhnya. Kunci nya adalah
+                                    konsistensi dalam rutinitas dan aktif berinteraksi dengan komunitas.
+                                </p>
+                            </div>
+                            <div class="bg-white dark:bg-[#3d2c20] rounded-xl p-6">
+                                <h3 class="font-bold text-lg mb-2">Apakah co-working space cocok untuk semua jenis
+                                    pekerjaan?</h3>
+                                <p class="text-[#1b130d]/70 dark:text-[#fcfaf8]/70">
+                                    Co-working space sangat cocok untuk pekerjaan yang memerlukan fleksibilitas,
+                                    kolaborasi, dan networking. Namun, untuk pekerjaan yang memerlukan privasi tinggi,
+                                    private office mungkin lebih sesuai.
+                                </p>
+                            </div>
+                            <div class="bg-white dark:bg-[#3d2c20] rounded-xl p-6">
+                                <h3 class="font-bold text-lg mb-2">Bagaimana cara mengatasi distraksi di co-working
+                                    space?</h3>
+                                <p class="text-[#1b130d]/70 dark:text-[#fcfaf8]/70">
+                                    Gunakan headphone noise-cancelling, pilih lokasi yang lebih tenang, dan
+                                    komunikasikan status "fokus" Anda kepada orang lain. Manfaatkan juga phone booth
+                                    atau quiet room jika tersedia.
+                                </p>
+                            </div>
+                            <div class="bg-white dark:bg-[#3d2c20] rounded-xl p-6">
+                                <h3 class="font-bold text-lg mb-2">Apakah perlu membawa peralatan sendiri?</h3>
+                                <p class="text-[#1b130d]/70 dark:text-[#fcfaf8]/70">
+                                    Sebagian besar co-working space menyediakan meja, kursi, dan WiFi. Namun, Anda perlu
+                                    membawa laptop dan peralatan kerja pribadi lainnya. Beberapa tempat juga menyediakan
+                                    monitor dan keyboard tambahan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Author Bio -->
+                    <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-8 mt-12">
+                        <h3 class="text-xl font-bold mb-4">Tentang Penulis</h3>
+                        <div class="flex flex-col md:flex-row gap-6 items-start">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
+                                alt="Sarah Johnson" class="w-24 h-24 rounded-full object-cover" />
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Sarah Johnson</h4>
+                                <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-3">
+                                    Sarah adalah productivity consultant dan content writer di Grapeslab. Dengan
+                                    pengalaman lebih dari 5 tahun di industri co-working, ia passionate tentang membantu
+                                    profesional mencapai performa terbaik mereka.
+                                </p>
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <span class="material-symbols-outlined">link</span>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share Article -->
+                    <div class="border-t border-b border-[#e7d9cf] dark:border-[#3d2c20] py-6 mt-12">
+                        <h3 class="font-bold mb-4">Bagikan Artikel Ini:</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="shareWhatsApp()"
+                                class="flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white rounded-lg hover:bg-[#25D366]/90 transition-colors">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                WhatsApp
+                            </button>
+                            <button onclick="shareFacebook()"
+                                class="flex items-center gap-2 px-4 py-2 bg-[#1877F2] text-white rounded-lg hover:bg-[#1877F2]/90 transition-colors">
+                                <span class="material-symbols-outlined">thumb_up</span>
+                                Facebook
+                            </button>
+                            <button onclick="shareTwitter()"
+                                class="flex items-center gap-2 px-4 py-2 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1DA1F2]/90 transition-colors">
+                                <span class="material-symbols-outlined">share</span>
+                                Twitter
+                            </button>
+                            <button onclick="shareLinkedIn()"
+                                class="flex items-center gap-2 px-4 py-2 bg-[#0A66C2] text-white rounded-lg hover:bg-[#0A66C2]/90 transition-colors">
+                                <span class="material-symbols-outlined">work</span>
+                                LinkedIn
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-6">Artikel Terkait</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <article class="bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group">
+                                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600"
+                                    alt="Remote Work"
+                                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <div class="p-6">
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/10 text-blue-600 text-xs font-bold rounded-full">TRENDS</span>
+                                    <h4 class="font-bold text-lg mt-3 mb-2">Masa Depan Remote Work dan Co-Working</h4>
+                                    <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                        Bagaimana tren kerja jarak jauh akan membentuk industri co-working di
+                                        tahun-tahun mendatang.
+                                    </p>
+                                    <a href="blog-masa-depan-remote-work.html"
+                                        class="text-primary font-semibold hover:underline">
+                                        Baca Selengkapnya →
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="bg-white dark:bg-[#3d2c20] rounded-xl overflow-hidden shadow-lg group">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600"
+                                    alt="Startup Guide"
+                                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <div class="p-6">
+                                    <span
+                                        class="px-3 py-1 bg-green-500/10 text-green-600 text-xs font-bold rounded-full">GUIDE</span>
+                                    <h4 class="font-bold text-lg mt-3 mb-2">Memilih Co-Working Space untuk Startup</h4>
+                                    <p class="text-sm text-[#1b130d]/70 dark:text-[#fcfaf8]/70 mb-4">
+                                        Panduan lengkap untuk founder startup dalam memilih workspace yang mendukung
+                                        pertumbuhan bisnis.
+                                    </p>
+                                    <a href="blog-memilih-coworking-startup.html"
+                                        class="text-primary font-semibold hover:underline">
+                                        Baca Selengkapnya →
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background-dark text-white px-4 lg:px-40 py-16 mt-20">
+            <div class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-2">
+                        <img src="logo.png" alt="Grapeslab Logo" class="h-6 w-auto"
+                            onerror="this.style.display='none';">
+                        <h2 class="text-lg font-bold">Grapeslab</h2>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Redefining the modern workspace through geometric design and community-focused environments.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Explore</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="workspace.html">Find a Space</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="blog.html">Blog</a></li>
+                        <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Contact</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@grapeslab.com</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +62 895-3699-69300</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-primary">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">thumb_up</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+                © 2024 Grapeslab. All rights reserved.
+            </div>
+        </footer>
+
+        <!-- Floating WhatsApp -->
+        <a class="whatsapp-float bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform"
+            href="https://wa.me/62895369969300?text=Halo%20Grapeslab,%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20workspace"
+            target="_blank">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+
+        <!-- Scroll to Top -->
+        <button id="scroll-to-top"
+            class="scroll-to-top bg-primary text-white p-3 rounded-full shadow-2xl hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+    </div>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        });
+
+        // Scroll to Top
+        const scrollBtn = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', () => {
+            scrollBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // TOC Toggle
+        function toggleTOC() {
+            const toc = document.getElementById('toc-content');
+            const icon = document.getElementById('toc-icon');
+            toc.classList.toggle('active');
+            icon.textContent = toc.classList.contains('active') ? 'expand_less' : 'expand_more';
+        }
+
+        // Share Functions
+        function shareWhatsApp() {
+            const url = window.location.href;
+            const text = '10 Tips Meningkatkan Produktivitas di Co-Working Space';
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' - ' + url)}`, '_blank');
+        }
+        function shareFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+        function shareTwitter() {
+            const text = '10 Tips Meningkatkan Produktivitas di Co-Working Space';
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+        function shareLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
