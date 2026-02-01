@@ -10,8 +10,11 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols_Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+
+    <!-- ✅ FIX SAMA: Material Symbols format stabil (biar icon gak jadi tulisan) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -36,6 +39,28 @@
         }
     </script>
     <style>
+        /* ✅ FIX: Material Symbols agar tidak tampil sebagai teks */
+        .material-symbols-outlined {
+            font-family: "Material Symbols Outlined";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: "liga";
+            -webkit-font-smoothing: antialiased;
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 400,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -98,10 +123,6 @@
                     <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
                         href="contact.html">Contact Us</a>
                 </nav>
-                <button
-                    class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-                    <span>Login</span>
-                </button>
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-primary">
                     <span class="material-symbols-outlined">menu</span>
@@ -111,7 +132,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="mobile-menu md:hidden bg-background-light dark:bg-background-dark border-b border-[#f3ece7] dark:border-[#3d2c20]">
+            class="mobile-menu md:hidden bg-background-light dark:bg-background-dark border-b border-[#f3ece7] dark:border-b-[#3d2c20]">
             <nav class="flex flex-col px-4 py-2">
                 <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
                     href="index.html">Home</a>
@@ -123,10 +144,6 @@
                     href="blog.html">Blog</a>
                 <a class="py-3 text-sm font-medium hover:text-primary transition-colors border-b border-[#f3ece7] dark:border-[#3d2c20]"
                     href="contact.html">Contact Us</a>
-                <button
-                    class="mt-3 mb-2 w-full cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold">
-                    Login
-                </button>
             </nav>
         </div>
 
@@ -526,8 +543,8 @@
             let hasResults = false;
 
             blogCards.forEach(card => {
-                const title = card.dataset.title.toLowerCase();
-                const category = card.dataset.category.toLowerCase();
+                const title = (card.dataset.title || '').toLowerCase();
+                const category = (card.dataset.category || '').toLowerCase();
 
                 if (title.includes(searchInput) || category.includes(searchInput)) {
                     card.style.display = 'block';
